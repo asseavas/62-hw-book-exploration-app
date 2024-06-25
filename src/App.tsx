@@ -2,25 +2,27 @@ import Toolbar from './components/Toolbar/Toolbar';
 import {Route, Routes} from 'react-router-dom';
 import Fiction from './containers/Fiction/Fiction';
 import {useState} from 'react';
-import './App.css';
 import PoetryBooks from './containers/PoetryBooks/PoetryBooks';
+import './App.css';
+import DramaBooks from './containers/DramaBooks/DramaBooks';
+import ProseBooks from './containers/ProseBooks/ProseBooks';
 
 const App = () => {
   const [genres] = useState([
     {
       id: '1',
       title: 'Поэзия',
-      description: 'Поэзия – жанр литературы, содержащий в своей основе стихотворные шедевры с идеальной образностью, достигнутой при гармоничном сочетании оригинальной формы и нового содержания с чувственной окраской.'
+      description: 'Поэзия – литературный жанр, в котором используется ритм, рифма и образные выражения, чтобы выразить чувства и идеи. Часто имеет короткие строки и может передавать глубокие мысли.'
     },
     {
       id: '2',
       title: 'Драма',
-      description: 'Драма – более серьезный жанр драматического произведения по сравнению с комедией. В основе драмы лежит драматический конфликт между героем и обществом.'
+      description: 'Драма – жанр литературы, предназначенный для постановки на сцене, где персонажи через диалоги и действия рассказывают историю, часто связанную с сильными эмоциями и конфликтами.'
     },
     {
       id: '3',
       title: 'Проза',
-      description: 'Проза — в узком смысле один из двух основных способов организации художественной речи, наряду с поэзией. К художественной прозе относят все виды нестихотворной, то есть не имеющей ритма и деления на строки/строфы, речи.'
+      description: 'Проза — жанр литературы, написанный обычным языком без ритма и рифмы, как в повседневной речи. В прозе рассказываются истории, описываются события и персонажи, как в романах и рассказах.'
     },
   ]);
 
@@ -33,10 +35,29 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Fiction genres={genres} />} >
             <Route path="поэзия" element={<PoetryBooks />} />
+            <Route path="драма" element={<DramaBooks />} />
+            <Route path="проза" element={<ProseBooks />} />
           </Route>
           <Route path="*" element={<h1 className="text-center">Not found!</h1>}/>
         </Routes>
       </main>
+      <footer>
+        <nav className="navbar shadow-sm rounded-4 rounded-bottom-0 p-3">
+          <div className="container d-flex justify-content-center align-items-center">
+            <ul className="navbar-nav d-flex flex-row gap-4 flex-nowrap">
+              <li className="nav-item">
+                <a href="#" className="footer-link">О нас</a>
+              </li>
+              <li className="nav-item">
+                <a href="#" className="footer-link">Лицензия</a>
+              </li>
+              <li className="nav-item">
+                <a href="#" className="footer-link">Блог</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </footer>
     </>
   );
 };

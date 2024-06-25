@@ -2,3 +2,9 @@ body {
   font-family: "Montserrat", sans-serif;
   background-color: #e9ecef;
 }
+
+.footer-link {
+  font-size: 14px;
+  text-decoration: none;
+  color: #8a8a8a;
+ }

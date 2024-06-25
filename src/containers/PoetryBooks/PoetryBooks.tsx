@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import {Book} from '../../types';
 import Books from '../../components/Books/Books';
 
-const PoetryBooks: React.FC = () => {
+const PoetryBooks = () => {
   const [books] = useState<Book[]>([
     {title: 'Цветы зла', author: 'Шарль Бодлер', year: '1857 г.', image: 'https://img3.labirint.ru/rc/dffad7ecce351ec54481e048f5b9d3dc/363x561q80/books86/859253/cover.png?1667823907'},
     {title: 'Сонеты к Орфею', author: 'Райнер Мария Рильке', year: '1923 г.', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1NpejxfYFejgNcVLTkysNe1DQfMUSNdwqWQ&s'},

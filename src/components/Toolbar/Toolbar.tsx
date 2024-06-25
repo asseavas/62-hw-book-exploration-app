@@ -8,7 +8,7 @@ const Toolbar: React.FC = () => {
         <NavLink to="/" className="navbar-brand">
           <h4 className="text-uppercase m-0">Books</h4>
         </NavLink>
-        <ul className="navbar-nav d-flex flex-row gap-4 flex-nowrap">
+        <ul className="navbar-nav d-flex flex-row gap-4">
           <li className="nav-item">
             <NavLink className="nav-link" to="/">
               Литература
