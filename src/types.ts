@@ -10,3 +10,10 @@ export interface Book {
   year: string;
   image: string;
 }
+
+export interface Writer {
+  name: string;
+  year: string;
+  image: string;
+  information: string;
+}

@@ -20,8 +20,8 @@ const Toolbar: React.FC = () => {
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link" to="/авторы">
-              Авторы
+            <NavLink className="nav-link" to="/писатели">
+              Писатели
             </NavLink>
           </li>
         </ul>
