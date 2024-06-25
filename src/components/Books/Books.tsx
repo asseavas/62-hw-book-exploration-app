@@ -9,7 +9,6 @@ interface Props {
 const Books: React.FC<Props> = ({books}) => {
   return (
     <>
-      <h2 className="text-center pt-5  mb-0">Поэзия</h2>
       <div className="container books-container d-flex justify-content-between py-5 flex-wrap gap-4">
         {books.map((book, index) => (
           <BookCard key={index} book={book}/>

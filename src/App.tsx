@@ -6,6 +6,7 @@ import PoetryBooks from './containers/PoetryBooks/PoetryBooks';
 import './App.css';
 import DramaBooks from './containers/DramaBooks/DramaBooks';
 import ProseBooks from './containers/ProseBooks/ProseBooks';
+import NonFiction from './containers/NonFiction/NonFiction';
 
 const App = () => {
   const [genres] = useState([
@@ -38,6 +39,7 @@ const App = () => {
             <Route path="драма" element={<DramaBooks />} />
             <Route path="проза" element={<ProseBooks />} />
           </Route>
+          <Route path="/нон-фикшн" element={<NonFiction />} />
           <Route path="*" element={<h1 className="text-center">Not found!</h1>}/>
         </Routes>
       </main>

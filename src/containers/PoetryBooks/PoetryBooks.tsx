@@ -16,7 +16,8 @@ const PoetryBooks = () => {
 
   return (
     <>
-      <Books books={books} />
+      <h2 className="text-center pt-5  mb-0">Поэзия</h2>
+      <Books books={books}/>
     </>
   );
 };

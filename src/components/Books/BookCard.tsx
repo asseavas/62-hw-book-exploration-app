@@ -8,7 +8,12 @@ interface Props {
 
 const BookCard: React.FC<Props> = ({book}) => {
   const imageStyle = {
-    background: `url(${book.image}) no-repeat center center / contain`,
+    width: '100%',
+    height: '200px',
+    backgroundImage: `url(${book.image})`,
+    backgroundSize: 'contain',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat'
   };
 
   return (
